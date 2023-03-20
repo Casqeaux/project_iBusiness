@@ -8,6 +8,7 @@
   <title>Business industry</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/c85924ff3f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -64,12 +65,14 @@
           <h1 class="section-hero__content-heading">Boost up your Local business</h1>
           <p class="section-hero__content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum typesetting</p>
         </div>
-        <div class="section-hero__content-form">
-          <input type="text">
-          <input type="text">
-          <input type="text">
-          <input type="text">
-        </div>
+        <form action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST" class="form">
+          <input required type="text" id="man" name="name" placeholder="Full Name" class="input">
+          <input required type="email"  id="email" name="email" placeholder="Email Adress" class="input">
+          <input required type="tel" id="phone" name="phone" placeholder=" Phone Number" class="input">
+          <button type="submit" class="btb btn-submit">
+            Request a quote
+          </button>
+          </form>
         <div class="section-hero__content-image">
           <img src="./img/Laptop@2x.png" alt="">
         </div>

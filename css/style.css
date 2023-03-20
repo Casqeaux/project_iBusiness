@@ -204,12 +204,65 @@ html {
   color: #fff;
 }
 
-.section-hero__content-form {
-  text-align: center;
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  flex: 0 0 calc(27% - 10px);
+  height: 45px;
+  border-radius: 3px;
+  border: none;
+}
+
+input::placeholder {
+  font-family: 'OpenSans';
+  font-size: 13px;
+  color: #a9a9a9;
+}
+
+input#man {
+  background-image: url(/img/man_ico.png);
+  background-repeat: no-repeat;
+  background-position: 15px 16px;
+  text-indent: 38px;
+}
+
+input#email {
+  background-image: url(/img/email_ico.png);
+  background-repeat: no-repeat;
+  background-position: 15px 16px;
+  text-indent: 40px;
+}
+
+input#phone {
+  background-image: url(/img/phone_ico.png);
+  background-repeat: no-repeat;
+  background-position: 15px 16px;
+  text-indent: 38px;
+}
+
+.btn-submit {
+  flex: 0 0 calc(20% - 10px);
+  height: 45px;
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
+  font-family: 'OpenSans';
+  background-color: #ffbb42;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 0.7s;
+}
+
+.btn-submit:hover {
+  background-color: red;
+  transition: 0.7s;
 }
 
 .section-hero__content-image {
-  margin: 90px auto 0;
+  margin: 70px auto 0;
   left: 0;
   right: 0;
   position: absolute;
