@@ -88,6 +88,21 @@
     url('../fonts/GothamPro-Black.woff') format('woff');
 }
 
+:root {
+  --red-color: #ff2400;
+  --blue-color: #709dca;
+  --blue-border: #1ca8dd;
+  --white-color: #ffffff;
+  --orange-color: #ffc155;
+  --orange-border: #e7ad48;
+  --orange-active: #ffbb42;
+  --grey-color: #7b7b7b;
+  --light-grey: #999999;
+  --minimal-grey: #a9a9a9;
+  --grey-border: #dedfe0;
+  --black-green: #394b50;
+}
+
 
 html {
   font-family: "OpenSans", sans-serif;
@@ -112,6 +127,23 @@ img {
   max-width: 100%;
 }
 
+.site-btn {
+  padding: 15px 30px;
+  color: var(--white-color);
+  text-transform: uppercase;
+  background-color: var(--orange-color);
+  border: 1px solid var(--orange-border);
+  border-radius: 3px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  transition: 0.7s;
+}
+
+.site-btn:hover {
+  background-color: var(--orange-border);
+  transition: 0.7s;
+}
+
 html {
   font-family: 'Open Sans', sans-serif;
 }
@@ -124,9 +156,9 @@ html {
   padding-left: 15px;
 }
 
-.header { 
+.header {
   height: 95px;
-  background-color: #fff;
+  background-color: var(--white-color);
 }
 
 .header__container {
@@ -136,44 +168,42 @@ html {
   height: 100%;
 }
 
-.nav {
+.header__nav {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 13.5px;
-
 }
 
-.nav-list {
+.header__nav-list {
   display: flex;
   align-items: center;
   margin: auto;
 }
 
-.nav-item {
+.header__nav-item {
   text-transform: uppercase;
-
-
 }
-.nav-item:not(:last-child) {
+
+.header__nav-item:not(:last-child) {
   margin-right: 40px;
 }
 
-.nav-link {
-  color: #999999;
+.header__nav-link {
+  color: var(--light-grey);
 }
 
 .is-active {
   padding: 12px 20px;
-  background-color: #ffbb42;
+  background-color: var(--orange-active);
   border-radius: 5px;
   color: #fff;
 }
 
-.nav-link:hover {
-  background-color: #ffbb42;
+.header__nav-link:hover {
+  background-color: var(--orange-active);
   border-radius: 5px;
   padding: 12px 20px;
-  color: #fff;
+  color: var(--white-color);
   transition: 0.25s;
 }
 
@@ -181,7 +211,7 @@ html {
 
 .section-hero {
   height: 590px;
-  background-color: #709dca;
+  background-color: var(--blue-color);
 }
 
 .section-hero__content {
@@ -191,7 +221,7 @@ html {
 .section-hero__content-heading {
   display: inline-block;
   margin: 100px 0 12px 0;
-  color: #fff;
+  color: var(--white-color);
   font-family: 'Gotham', sans-serif;
   font-weight: 400;
   font-size: 35px;
@@ -205,63 +235,63 @@ html {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  color: #fff;
+  color: var(--white-color);
 }
 
-.form {
+.section-hero__form {
   display: flex;
   justify-content: space-between;
 }
 
-input {
+.section-hero__input {
   flex: 0 0 calc(27% - 10px);
   height: 45px;
   border-radius: 3px;
   border: none;
 }
 
-input::placeholder {
+.section-hero__input::placeholder {
   font-family: 'OpenSans';
   font-size: 13px;
-  color: #a9a9a9;
+  color: var(--minimal-grey);
 }
 
-input#man {
+.section-hero__input#man {
   background-image: url(../img/man_ico.png);
   background-repeat: no-repeat;
   background-position: 15px 16px;
   text-indent: 38px;
 }
 
-input#email {
+.section-hero__input#email {
   background-image: url(../img/email_ico.png);
   background-repeat: no-repeat;
   background-position: 15px 16px;
   text-indent: 40px;
 }
 
-input#phone {
+.section-hero__input#phone {
   background-image: url(../img/phone_ico.png);
   background-repeat: no-repeat;
   background-position: 15px 16px;
   text-indent: 38px;
 }
 
-.btn-submit {
+.section-hero__btn-submit {
   flex: 0 0 calc(20% - 10px);
   height: 45px;
   border-radius: 3px;
   border: none;
   font-size: 14px;
   font-family: 'OpenSans';
-  background-color: #ffbb42;
+  background-color: var(--orange-active);
   text-transform: uppercase;
-  color: #fff;
+  color: var(--white-color);
   transition: 0.7s;
 }
 
-.btn-submit:hover {
-  background-color: red;
+.section-hero__btn-submit:hover {
+  background-color: var(--red-color);
   transition: 0.7s;
 }
 
@@ -286,7 +316,7 @@ input#phone {
   display: inline-block;
   width: 16px;
   height: 16px;
-  border: 2px solid #1ca8dd;
+  border: 2px solid var(--blue-border);
   border-radius: 50px;
 }
 
@@ -295,7 +325,7 @@ input#phone {
   display: inline-block;
   width: 16px;
   height: 16px;
-  border: 2px solid #dedfe0;
+  border: 2px solid var(--grey-border);
   border-radius: 50px;
 }
 
@@ -308,7 +338,7 @@ input#phone {
   font-size: 30px;
   font-family: 'Gotham', sans-serif;
   font-weight: 900;
-  color: #394b50;
+  color: var(--black-green);
   text-transform: uppercase;
 }
 
@@ -356,7 +386,7 @@ input#phone {
   font-family: 'Lato', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
-  color: #394b50;
+  color: var(--black-green);
   font-size: 16px;
   line-height: 24px;
 }
@@ -367,18 +397,17 @@ input#phone {
   font-weight: 400;
   font-size: 13px;
   line-height: 22px;
-  color: #7b7b7b;
+  color: var(--grey-color);
 }
 
 /* About Us */
 
-.about-us {
+.section-about {
   min-height: 630px;
   display: flex;
-
 }
 
-.about-us__left {
+.section-about__left {
   background-image: url("../img/about_pic_bckg.png");
   background-position: center;
   background-size: cover;
@@ -386,50 +415,50 @@ input#phone {
   width: 50%;
 }
 
-.about-us__right {
+.section-about__right {
   display: flex;
   flex-direction: column;
-  background-color: #ffc155;
+  background-color: var(--orange-color);
   justify-content: center;
   width: 50%;
 }
 
-.about-us__content__wrap {
+.section-about__content-wrap {
   padding: 0 0 0 80px;
   max-width: 600px;
 }
 
-.about-us__heading {
+.section-about__heading {
   font-family: "Gotham";
   padding: 0 0 20px 0;
   font-weight: 900;
   font-size: 30px;
-  color: #fff;
+  color: var(--white-color);
   text-transform: uppercase;
 }
 
-.about-us__description {
+.section-about__description {
   margin: 0;
   font-size: 13px;
   line-height: 24px;
   font-family: "OpenSans", sans-serif;
-  color:#fff;
+  color: #fff;
   padding: 0 0 30px 0;
 }
 
-.about-us__button {
+.section-about__button {
   padding: 15px 30px;
-  color: #fff;
+  color: var(--white-color);
   text-transform: uppercase;
-  background-color: #ffc155;
-  border: 1px solid #e7ad48;
+  background-color: var(--orange-color);
+  border: 1px solid var(--orange-border);
   border-radius: 3px;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   transition: 0.7s;
 }
 
-.about-us__button:hover {
-  background-color: #e7ad48;
+.section-about__button:hover {
+  background-color: var(--orange-border);
   transition: 0.7s;
 }
