@@ -101,6 +101,10 @@
   --minimal-grey: #a9a9a9;
   --grey-border: #dedfe0;
   --black-green: #394b50;
+  --price-color: #e7edf3;
+  --price-heading: #818b95;
+  --price-content: #b5bbc1;
+  --price-border: #ccd5df;
 }
 
 
@@ -108,6 +112,22 @@ html {
   font-family: "OpenSans", sans-serif;
   font-weight: 400;
 }
+
+.site-heading {
+  margin: 0 0 5px 0;
+  font-size: 30px;
+  font-family: 'Gotham', sans-serif;
+  font-weight: 900;
+  color: var(--black-green);
+  text-transform: uppercase;
+}
+
+.site-heading-description {
+  margin: 0 0 100px 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 
 * {
   box-sizing: border-box;
@@ -136,12 +156,14 @@ img {
   border-radius: 3px;
   font-family: "Lato", sans-serif;
   font-size: 14px;
-  transition: 0.7s;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 .site-btn:hover {
   background-color: var(--orange-border);
   transition: 0.7s;
+  cursor: pointer;
 }
 
 html {
@@ -231,7 +253,6 @@ html {
 
 .section-hero__content-text {
   margin: 0 0 40px 0;
-  font-family: 'OpenSans', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
@@ -251,7 +272,6 @@ html {
 }
 
 .section-hero__input::placeholder {
-  font-family: 'OpenSans';
   font-size: 13px;
   color: var(--minimal-grey);
 }
@@ -283,7 +303,6 @@ html {
   border-radius: 3px;
   border: none;
   font-size: 14px;
-  font-family: 'OpenSans';
   background-color: var(--orange-active);
   text-transform: uppercase;
   color: var(--white-color);
@@ -345,7 +364,6 @@ html {
 .section-services__content-text {
   margin: 0 0 100px 0;
   font-size: 16px;
-  font-family: 'OpenSans', sans-serif;
   font-weight: 400;
 }
 
@@ -393,7 +411,6 @@ html {
 
 .section-services__tabs-text {
   margin: 0;
-  font-family: 'OpenSans', sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 22px;
@@ -441,8 +458,7 @@ html {
   margin: 0;
   font-size: 13px;
   line-height: 24px;
-  font-family: "OpenSans", sans-serif;
-  color: #fff;
+  color: var(--white-color);
   padding: 0 0 30px 0;
 }
 
@@ -461,4 +477,145 @@ html {
 .section-about__button:hover {
   background-color: var(--orange-border);
   transition: 0.7s;
+}
+
+/* Section Price */
+
+.section-price {
+  background-color: var(--price-color);
+}
+
+.section-price__container {
+  padding: 130px 0 0 0;
+  min-height: 900px;
+
+}
+
+.section-price__content {
+  text-align: center;
+}
+
+.section-price__content-text {
+  margin: 0 0 85px 0;
+}
+
+.section-price__cart-flex {
+  display: flex;
+
+}
+
+.section-price__cart-wrap {
+  width: 391px;
+  height: 450px;
+  padding: 50px 30px 50px;
+  background-color: var(--white-color);
+  border-radius: 5px;
+  border: 1px solid var(--price-border);
+}
+
+.section-price__cart-wrap:hover {
+  background-color: #709dca;
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.section-price__cart-wrap:hover 
+.section-price__cart-heading {
+  color: var(--white-color);
+}
+
+.section-price__cart-wrap:hover 
+.section-price__cart-price {
+  color: var(--white-color);
+}
+
+.section-price__cart-wrap:hover 
+.section-price__cart-month {
+  color: var(--white-color);
+}
+
+.section-price__cart-wrap:hover 
+.section-price__cart-content-underline {
+  color: var(--white-color);
+}
+
+
+.section-price__cart-wrap:not(:last-child) {
+  margin-right: 10px;
+}
+
+.section-price__cart-heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 25px;
+  padding: 0 0 30px 0;
+  color: var(--price-heading);
+}
+
+.section-price__cart-price {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  color: var(--orange-active);
+  font-size: 60px;
+}
+
+.section-price__cart-price sup {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  font-variant: small-caps;
+}
+
+.section-price__cart-month {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: var(--price-heading);
+  padding: 0 0 25px 0;
+}
+
+.section-price__cart-content-underline {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 40px;
+  color: var(--price-content);
+}
+
+.section-price__cart-content-underline::before {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 329px;
+  height: 1px;
+  background-color: #e2e9f0;
+}
+
+.section-price__cart-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.section-price__cart-wrap:hover 
+.section-price__cart-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: none;
+  background-color: var(--white-color);
+  color: var(--black-green);
+  cursor: pointer;
 }
