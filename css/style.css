@@ -619,3 +619,106 @@ html {
   color: var(--black-green);
   cursor: pointer;
 }
+
+/* How It Works */
+
+.section-works__container {
+  min-height: 860px;
+  padding-top: 150px;
+}
+
+.section-works__content {
+  text-align: center;
+}
+
+.section-work__cart-flex {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 90px 0;
+}
+
+.section-work__cart-wrap {
+  max-width: 260px;
+}
+
+.section-work__icon {
+  max-width: 90px;
+  max-height: 70px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 95px;
+
+}
+
+.section-work__heading {
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--black-green);
+}
+
+.section-work__text {
+  font-size: 13px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.section-work___button {
+  display: block;
+  margin: 0 auto;
+  border: none;
+}
+
+.section-work___button:hover {
+  transform: scale(1.1);
+}
+
+.section-work__arrow {
+  position: absolute;
+  background-image: url(../img/arrow.png);
+  background-repeat: no-repeat;
+  width: 128px;
+  height: 32px;
+}
+
+.arrow-1 {
+  left: 233px;
+  top: -10%;
+}
+
+.arrow-2 {
+  left: 523px;
+  top: 25%;
+  transform: rotate(180deg);
+}
+
+.arrow-3 {
+  left: 830px;
+  top: -10%;
+}
+
+/* Section Happy */
+
+.section-happy {
+  background-color: var(--orange-color);
+}
+
+.section-happy__container {
+  min-height: 910px;
+}
+
+.section-happy__content {
+  padding: 120px 0 0 0;
+  text-align: center;
+}
+
+.section-happy__content-heading {
+  color: var(--white-color);
+}
+
+.section-happy__content-text {
+  color: var(--white-color);
+}
